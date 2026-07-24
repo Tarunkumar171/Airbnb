@@ -1,6 +1,6 @@
 {
-  "engines":{
-    "node":"22.19.0"
+  "engines": { 
+      "node": "22.19.0"
   },
   "name": "project",
   "version": "1.0.0",
@@ -15,6 +15,7 @@
   "dependencies": {
     "cloudinary": "^2.7.0",
     "connect-flash": "^0.1.1",
+    "connect-mongo": "^6.0.0",
     "cookie-parser": "^1.4.7",
     "dotenv": "^17.2.3",
     "ejs": "^3.1.10",
