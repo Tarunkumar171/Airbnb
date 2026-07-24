@@ -114,14 +114,16 @@ app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
 app.use("/",userRouter);
 
+const PORT = process.env.PORT || 8080;
 
-app.listen(8080,(()=>{
-    console.log("app is listening on port 8080");
-}))
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
 
 app.get("/",(req,res)=>{
-    console.log(req.cookies);
-    res.send("This is a root directory");
+    // console.log(req.cookies);
+    // res.send("This is a root directory");
+    res.render("users/signup.ejs");
 })
 
 app.use((err,req,res,next)=>{
