@@ -98,7 +98,8 @@ app.get("/verify",(req,res)=>{
 
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/wanderlust');
+    // console.log(process.env.ATLASDB_URL);
+  await mongoose.connect(process.env.ATLASDB_URL);
 }
 
 main().then((res)=>{
